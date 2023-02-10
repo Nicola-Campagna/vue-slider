@@ -67,3 +67,7 @@ img {
     border: 10px solid white;
     cursor: pointer;
 }
+
+.border-active {
+    border: 5px solid blue;
+}

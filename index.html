@@ -35,106 +35,74 @@
     <div id="root">
 
 
-        <!-- <div class="my-carousel-container">
+        <div class="my-carousel-container">
             <div class="my-carousel">
 
-                <div class="my-carousel-main" id="slides-container"> -->
+                <div class="my-carousel-main" id="slides-container">
+                    <!-- img visualizzata -->
+                    <div class="slide active">
+                        <!-- {{ima}} -->
+                        <img :src="games.images[games.activeImage]">
+                        <div class="slide-text">
+                            <h2 v-text="games.title[games.activeTitle]"></h2>
 
-        <!-- <div class="slide active">
-					<img src="./img/01.webp">
-					<div class="slide-text">
-						<h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatum unde
-							laboriosam
-							molestiae.</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt doloremque hic eaque
-							culpa
-							aspernatur.</p>
-					</div>
-				</div>
-				<div class="slide">
-					<img src="./img/02.webp">
-					div.te
-					<div class="slide-text">
-						<h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatum unde
-							laboriosam
-							molestiae.</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt doloremque hic eaque
-							culpa
-							aspernatur.</p>
-					</div>
-				</div>
-				<div class="slide">
-					<img src="./img/03.webp">
-					<div class="slide-text">
-						<h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatum unde
-							laboriosam
-							molestiae.</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt doloremque hic eaque
-							culpa
-							aspernatur.</p>
-					</div>
-				</div>
-				<div class="slide">
-                    <img src="./img/04.webp">
-					<div class="slide-text">
-						<h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatum unde
-							laboriosam
-							molestiae.</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt doloremque hic eaque
-							culpa
-							aspernatur.</p>
-					</div>
-				</div>
-				<div class="slide">
-					<img src="./img/05.webp">
-					<div class="slide-text">
-						<h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatum unde
-							laboriosam
-							molestiae.</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt doloremque hic eaque
-							culpa
-							aspernatur.</p>
-					</div>
-				</div> -->
-        <!-- </div>
+                        </div>
+                        <!--</div>
+                    <div class="slide">
+                        <img :src="games.images[1]">
+                        <div class="slide-text">
+                            <h2>{{games.title[1]}}</h2>
 
-                <div class="my-carousel-thumbs row" id="thumbs-container"> -->
-        <!-- <div class="col thumb">
-					<img src="./img/01.webp">
-				</div>
-				<div class="col thumb">
-					<img src="./img/02.webp">
-				</div>
-				<div class="col thumb">
-					<img src="./img/03.webp">
-				</div>
-				<div class="col thumb">
-					<img src="./img/04.webp">
-				</div>
-				<div class="col thumb">
-                    <img src="./img/05.webp">
-				</div> -->
-        <!-- </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img :src="games.images[2]">
+                        <div class="slide-text">
+                            <h2>{{games.title[2]}}</h2>
 
-                <div class="controls">
-                    <span id="prev">
-                        prev
-                    </span>
-                    <span id="next">
-                        next
-                    </span>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img :src="games.images[3]">
+                        <div class="slide-text">
+                            <h2>{{games.title[3]}}</h2>
+
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img :src="games.images[4]">
+                        <div class="slide-text">
+                            <h2>{{games.title[4]}}</h2>
+
+                        </div>
+                    </div> -->
+                    </div>
+
+                    <div class="my-carousel-thumbs row-cols-5" id="thumbs-container">
+
+                        <img :src="image" v-for="(image,index) in games.images" class="thumb"
+                            :class="(index==games.activeImage) ? 'border-active' : ''" @click='switchImage(index)'>
+                    </div>
+
+                    <div class=" controls">
+                        <span v-on:click="prevImage()" id="prev">
+                            prev
+                        </span>
+                        <span v-on:click="nextImage()" id="next">
+                            next
+                        </span>
+                    </div>
+
                 </div>
-
+                <!-- <div>
+                <button class="btn btn-primary" id="inverti-autoplay">Inverti</button>
+                <button class="btn btn-primary" id="stop-autoplay">Ferma</button>
             </div> -->
-        <!-- <div>
-            <button class="btn btn-primary" id="inverti-autoplay">Inverti</button>
-            <button class="btn btn-primary" id="stop-autoplay">Ferma</button>
-        </div> -->
-        <!-- </div> -->
+            </div>
 
 
-    </div>
-    <!-- fine root vuejs -->
+        </div>
+        <!-- fine root vuejs -->
 </body>
 
 </html>
