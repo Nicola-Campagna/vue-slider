@@ -49,8 +49,8 @@ const settingVue = Vue.createApp({
                 this.games.activeImage - 1 < 0 &&
                 this.games.activeTitle - 1 < 0
             ) {
-                this.games.activeImage = this.game.images.length - 1;
-                this.games.activeTitle = this.game.title.length - 1;
+                this.games.activeImage = this.games.images.length - 1;
+                this.games.activeTitle = this.games.images.length - 1;
             } else {
                 this.games.activeImage--;
                 this.games.activeTitle--;

@@ -34,56 +34,26 @@
     <!-- setting vuejs -->
     <div id="root">
 
-
+        <!-- contenitore/carosello -->
         <div class="my-carousel-container">
             <div class="my-carousel">
-
+                <!-- contenitore/carosello parte superiore -->
                 <div class="my-carousel-main" id="slides-container">
                     <!-- img visualizzata -->
                     <div class="slide active">
-                        <!-- {{ima}} -->
                         <img :src="games.images[games.activeImage]">
+                        <!-- testo visualizzato -->
                         <div class="slide-text">
                             <h2 v-text="games.title[games.activeTitle]"></h2>
-
-                        </div>
-                        <!--</div>
-                    <div class="slide">
-                        <img :src="games.images[1]">
-                        <div class="slide-text">
-                            <h2>{{games.title[1]}}</h2>
-
                         </div>
                     </div>
-                    <div class="slide">
-                        <img :src="games.images[2]">
-                        <div class="slide-text">
-                            <h2>{{games.title[2]}}</h2>
-
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img :src="games.images[3]">
-                        <div class="slide-text">
-                            <h2>{{games.title[3]}}</h2>
-
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img :src="games.images[4]">
-                        <div class="slide-text">
-                            <h2>{{games.title[4]}}</h2>
-
-                        </div>
-                    </div> -->
-                    </div>
-
+                    <!-- contenitore/carosello parte inferiore -->
                     <div class="my-carousel-thumbs row-cols-5" id="thumbs-container">
-
+                        <!-- img-sotto "thumb" -->
                         <img :src="image" v-for="(image,index) in games.images" class="thumb"
                             :class="(index==games.activeImage) ? 'border-active' : ''" @click='switchImage(index)'>
                     </div>
-
+                    <!-- controlli avanti e indietro -->
                     <div class=" controls">
                         <span v-on:click="prevImage()" id="prev">
                             prev
@@ -92,12 +62,8 @@
                             next
                         </span>
                     </div>
-
                 </div>
-                <!-- <div>
-                <button class="btn btn-primary" id="inverti-autoplay">Inverti</button>
-                <button class="btn btn-primary" id="stop-autoplay">Ferma</button>
-            </div> -->
+
             </div>
 
 
