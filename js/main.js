@@ -68,12 +68,11 @@ const settingVue = Vue.createApp({
                 this.games.activeImage++;
                 this.games.activeTitle++;
             }
-
-
         },
 
-        switchImage() {
-            alert("funziona" + index)
+        switchImage(i) {
+            this.activeImage = i;
+            alert("funziona" + i);
         }
     }
 

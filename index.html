@@ -51,7 +51,7 @@
                     <div class="my-carousel-thumbs row-cols-5" id="thumbs-container">
                         <!-- img-sotto "thumb" -->
                         <img :src="image" v-for="(image,index) in games.images" class="thumb"
-                            :class="(index==games.activeImage) ? 'border-active' : ''" @click='switchImage(index)'>
+                            :class="(index==games.activeImage) ? 'border-active' : ''" @click="switchImage(index)">
                     </div>
                     <!-- controlli avanti e indietro -->
                     <div class=" controls">
